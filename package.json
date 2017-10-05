@@ -1,0 +1,17 @@
+{
+  "name": "ipo-apis",
+  "version": "1.0.0",
+  "description": "Services to make the functional work for any app made for church basics resources management",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "João Marcos Chaves",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.1",
+    "mongoose": "^4.12.0",
+    "node-restful": "^0.2.6"
+  }
+}
