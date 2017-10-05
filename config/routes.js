@@ -5,5 +5,9 @@ module.exports = server =>{
 	server.use('/api',router)
 
 	const churchService = require('../api/church/churchService')
+	const familyService = require('../api/family/familyService')
+
+
 	churchService.register(router,'/church')
+	familyService.register(router,'/family')
 }
