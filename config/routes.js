@@ -14,6 +14,7 @@ module.exports = server =>{
 	memberService.register(router,'/member')
 
 	router.route('/birthday/month').get(birthdayService.monthBirthday)
+	router.route('/birthday/month/:month').get(birthdayService.selectedMonthBirthday)
 	router.route('/birthday/week').get(birthdayService.weekBirthday)
 	router.route('/birthday/lastWeek').get(birthdayService.lastWeekBirthday)
 }
