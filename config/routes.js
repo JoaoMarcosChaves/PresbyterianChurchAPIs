@@ -7,6 +7,7 @@ module.exports = server =>{
 	const churchService = require('../api/church/churchService')
 	const familyService = require('../api/family/familyService')
 	const memberService = require('../api/member/memberService')
+	const memberListService = require('../api/member/memberListService')
 	const birthdayService = require('../api/birthday/birthdaysService')
 
 	churchService.register(router,'/church')
@@ -17,4 +18,9 @@ module.exports = server =>{
 	router.route('/birthday/month/:month').get(birthdayService.selectedMonthBirthday)
 	router.route('/birthday/week').get(birthdayService.weekBirthday)
 	router.route('/birthday/lastWeek').get(birthdayService.lastWeekBirthday)
+
+	router.route('/member/frequent').get(memberListService.frequentMembersList)
+	router.route('/member/infrequent').get(memberListService.infrequentMembersList)
+	router.route('/member/active').get(memberListService.activeMembersList)
+	router.route('/member/inactive').get(memberListService.inactiveMembersList)
 }

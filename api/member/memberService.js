@@ -6,4 +6,6 @@ memberSchema.updateOptions({new: true, runValidators: true})
 
 memberSchema.after('post', handleErrors.sendErrorsOrNext).after('put',handleErrors.sendErrorsOrNext)
 
+
+
 module.exports = memberSchema
