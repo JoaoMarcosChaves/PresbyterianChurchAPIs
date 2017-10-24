@@ -23,4 +23,6 @@ module.exports = server =>{
 	router.route('/member/infrequent').get(memberListService.infrequentMembersList)
 	router.route('/member/active').get(memberListService.activeMembersList)
 	router.route('/member/inactive').get(memberListService.inactiveMembersList)
+	router.route('/member/order').get(memberListService.fullMembersOrderedList)
+	router.route('/member/byFamily').get(memberListService.membersByFamilyList)
 }

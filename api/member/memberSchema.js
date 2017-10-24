@@ -12,6 +12,7 @@ const phoneMemberSchema = new mongoose.Schema({
 
 const memberSchema = new mongoose.Schema({
 	refFamilyObj: {type: String, minlength: 1, require: true},
+	familyName: {type: String, minlength: 1, uppercase: true, require: true},
 	name: {type: String, minlength: 5, require: true},
 	cep: {type: String, minlength: 8, maxlength: 8, require: true},
 	birthDate: {type: Date, require: true},
